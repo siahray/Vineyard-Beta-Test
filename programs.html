@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="programs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Programs</title>
+</head>
+
+<body>
+    <button onclick="scrollToTop()" id="back-to-top" title="Back to Top">↑</button>
+
+    <nav>
+
+        <ul class="sidebar">
+
+            
+            <li onclick=hideSidebar()><svg id="burg" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></a></li>
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="#" onclick="toggleDropdown(event)">About Us⠀<i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown">
+                <a href="about.html">About</a>
+                <a href="team.html">Teams</a>
+                <a href="awards.html">Awards</a>
+            </div>
+            <a href="donate.html">Donate</a>
+        </ul>
+        
+        <ul>
+
+            <div class="vineyard">
+                <div class="logo">
+                    <img src="Resources/logo.jpg" alt="logo">
+                </div>
+            </div>
+            
+            <div class="vineyard-pc">
+                <div class="logo-pc">
+                    <img src="Resources/logo.jpg" alt="logo">
+                </div>
+                <div class="header-pc">
+                    <h1>VINEYARD</h1>
+                </div>
+            </div>
+
+            <div class="showOnPc">
+                <a href="index.html">Home</a>
+                <a href="programs.html">Programs</a>
+                <div class="dropdown-pc">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="team.html">Teams</a>
+                        <a href="awards.html">Awards</a>
+                    </div>
+                </div>
+                <a href="donate.html">Donate</a>
+            </div>
+            <li class="burger" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+
+    </nav>
+
+    <!------------
+  ----SPLASH----
+  -------------->
+
+    <div class="splash">
+
+        <picture class="splash-img">
+            <source media="(min-width: 40em)" srcset="Resources/progs.png" width="1920" height="1262">
+
+            <img src="Resources/progscp.png" alt="splashpic" width="1200" height="815">
+        </picture>
+
+        <div class="splash-text">
+
+            <h1>PROGRAMS</h1>
+
+            <P> Our programs are dedicated to supporting vulnerable communities and
+                individuals by offering educational, nutritional, and emergency
+                assistance to those in need. Through partnerships with local government
+                units, churches, and community groups, we strive to empower and uplift
+                through learning opportunities, health services, and sustainable
+                livelihood programs.</P>
+        </div>
+    </div>
+
+    <!------------
+  ----ADVO----
+  -------------->
+    <div class="advocacy">
+
+        <div id="advocacy-title">
+            <h1>ADVOCACY</h1>
+            <p>PROJECT HEAL</p>
+        </div>
+
+        <div class="project">
+
+            <div class="heal">
+                <img src="Resources/cl.png" alt="child link">
+                <div class="text-container">
+                    <h2>Human development through children's empowerment (ChildLink)</h2>
+                    <p>We aim to help many of the poor with little to no access to quality education in underserved
+                        communities throughout the country while positively impacting the lives of children and their
+                        families.</p>
+                </div>
+            </div>
+
+            <div class="heal">
+                <img src="Resources/EiE (2).png" alt="eie">
+                <div class="text-container">
+                    <h2>Emergency Response through Education in Emergencies (EiE)</h2>
+                    <p>Vineyard aims to see children and youth return to learning as quickly as possible after emergency
+                        situations. We believe our partnership with schools will provide safe spaces for children to
+                        build friendships, play, and learn.</p>
+                </div>
+            </div>
+
+            <div class="heal">
+                <img src="Resources/Comsca.png" alt="comsca">
+                <div class="text-container">
+                    <h2>Livelihood and Community Development (CoMSCA and CVA)</h2>
+                    <p>Pandemics have caused challenges for individuals and communities. Investing in livelihood
+                        programs to promote resilience and adaptability. Collaboration between the government,
+                        non-governmental organizations, and the private sector can address livelihood challenges.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------
+  ----Uevents----
+  -------------->
+
+    <div class="upcomming-events">
+
+        <h1>UPCOMMING EVENTS</h1>
+
+        <div class="upcomming-events-container">
+            <div class="upcomming-events-content">
+                <div class="upcomming-info">
+                    <h2>EVENT</h2>
+                </div>
+                <div class="upcomming-info">
+                    <h2>EVENT</h2>
+                </div>
+                <div class="upcomming-info">
+                    <h2>EVENT</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Ongoing Programs-->
+
+
+    <div class="ongoing-programs">
+        <h1>ONGOING PROGRAMS</h1>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <div class="overlay-container">
+                        <img src="Resources/event1.jpg" alt="Image 1">
+                        <div class="overlay">
+                            <h2>Event Title</h2>
+                            <p>Event description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="overlay-container">
+                        <img src="Resources/event2.jpg" alt="Image 2">
+                        <div class="overlay">
+                            <h2>Event Title</h2>
+                            <p>Event description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="overlay-container">
+                        <img src="Resources/event2.jpg" alt="Image 3">
+                        <div class="overlay">
+                            <h2>Event Title</h2>
+                            <p>Event description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlides(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlides(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!------------
+  ----Fevents----
+  -------------->
+
+    <div class="finished">
+
+        <h1>FINISHED EVENTS</h1>
+
+        <div class="fevcontainer">
+
+            <div class="fevcontent">
+                <div class="finpics">
+                    <img src="Resources/event1.jpg" alt="">
+                </div>
+                <div class="finpics">
+                    <img src="Resources/event1.jpg" alt="">
+                </div>
+                <div class="finpics">
+                    <img src="Resources/event1.jpg" alt="">
+                </div>
+                <div class="finpics">
+                    <img src="Resources/event1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+        <p>&copy; 2025 Vineyard Philippines. All rights reserved.</p>
+        <p>
+            <a href="https://www.example.com/privacy-policy" target="_blank">Privacy Policy</a> |
+            <a href="https://www.example.com/terms" target="_blank">Terms of Service</a>
+        </p>
+        <p class="media-container">Follow us on:
+            <a href="https://www.facebook.com/vineyardphilippines" target="_blank">
+                <i class="fab fa-facebook"></i></a>
+            <span class="facebook-tooltip"></span>
+            <button id="email-copy" class="icon-button">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+            <span id="email-popup" class="email-tooltip"></span>
+            <button id="phone-copy" class="icon-button">
+                <i class="fa-solid fa-phone"></i>
+            </button>
+            <span id="phone-popup" class="phone-tooltip"></span>
+            <a href="https://www.google.com/maps/place/101+Ortega+St" target="_blank">
+                <i class="fa-solid fa-location-dot"></i></a>
+            <span class="location-tooltip"></span>
+        </p>
+
+    </footer>
+</body>
+
+</html>

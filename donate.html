@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Vineyard Philippines</title>
+</head>
+
+<body>
+
+    <button onclick="scrollToTop()" id="back-to-top" title="Back to Top">↑</button>
+    
+
+    <nav>
+
+        <ul class="sidebar">
+
+            
+            <li onclick=hideSidebar()><svg id="burg" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></a></li>
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="#" onclick="toggleDropdown(event)">About Us⠀<i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown">
+                <a href="about.html">About</a>
+                <a href="team.html">Teams</a>
+                <a href="awards.html">Awards</a>
+            </div>
+            <a href="donate.html">Donate</a>
+        </ul>
+        
+        <ul>
+
+            <div class="vineyard">
+                <div class="logo">
+                    <img src="Resources/logo.jpg" alt="logo">
+                </div>
+            </div>
+            
+            <div class="vineyard-pc">
+                <div class="logo-pc">
+                    <img src="Resources/logo.jpg" alt="logo">
+                </div>
+                <div class="header-pc">
+                    <h1>VINEYARD</h1>
+                </div>
+            </div>
+
+            <div class="showOnPc">
+                <a href="index.html">Home</a>
+                <a href="programs.html">Programs</a>
+                <div class="dropdown-pc">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="team.html">Teams</a>
+                        <a href="awards.html">Awards</a>
+                    </div>
+                </div>
+                <a href="donate.html">Donate</a>
+            </div>
+            <li class="burger" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+
+    </nav>
+
+    <!------------
+  ----SPLASH----
+  -------------->
+    <div class="donate-container">
+
+        <div class="splash-container">
+
+            <picture class="splash-img">
+                <source media="(min-width: 40em)" srcset="Resources/donate.png" width="1920" height="1262">
+
+                <img src="Resources/donatescpArtboard 1.png" alt="splashpic" width="1200" height="815">
+            </picture>
+
+        </div>
+
+
+
+        <div class="donate">
+            <div class="donate-content">
+                <h2>HELP CHANGE LIVES</h2>
+                <p>DONATE NOW</p>
+
+
+                <div class="progress-bar">
+                    <div class="progress-step active">Amount</div>
+                    <div class="progress-step">My Info</div>
+                    <div class="progress-step">Payment</div>
+                    <div class="progress-step">Confirm</div>
+                </div>
+
+                <div class="donate-options">
+                    <div class="tab">
+                        <button id="monthly" class="active" onclick="switchTab('monthly')">MONTHLY</button>
+                        <button id="one-time" onclick="switchTab('one-time')">ONE-TIME</button>
+                    </div>
+
+
+                    <div id="monthly-options" class="amount-grid">
+                        <button onclick="selectAmount(1000, event)">₱1,000</button>
+                        <button onclick="selectAmount(750, event)">₱750</button>
+                        <button onclick="selectAmount(600, event)">₱600</button>
+                        <button onclick="selectAmount(500, event)">₱500</button>
+                        <button onclick="selectAmount(300, event)">₱300</button>
+                        <button onclick="selectAmount(200, event)">₱200</button>
+                    </div>
+
+
+                    <div id="one-time-options" class="amount-grid">
+                        <button onclick="selectAmount(3500, event)">₱3,500</button>
+                        <button onclick="selectAmount(2500, event)">₱2,500</button>
+                        <button onclick="selectAmount(1500, event)">₱1,500</button>
+                        <button onclick="selectAmount(1000, event)">₱1,000</button>
+                        <button onclick="selectAmount(800, event)">₱800</button>
+                        <button onclick="selectAmount(500, event)">₱500</button>
+                    </div>
+
+                    <div class="custom-amount">
+                        <label for="custom-donation"></label>
+                        <input type="number" id="custom-donation" min="1" placeholder="Enter Custom Amount (₱):"
+                            oninput="selectCustomAmount()">
+                    </div>
+
+
+                    <button class="donate-btn" id="donate" disabled onclick="showInfoForm()">DONATE</button>
+
+                </div>
+
+                <div id="info-form" class="info-form">
+                    <h3>My Information</h3>
+                    <input type="text" placeholder="Name *" required><br>
+                    <input type="text" placeholder="Address *" required><br>
+                    <input type="email" placeholder="Email Address *" required><br>
+                    <input type="tel" placeholder="Phone Number *" required><br>
+                    <select>
+                        <option>Youth Empowerment</option>
+                        <option>Health and Hygiene</option>
+                        <option>Economic Development</option>
+                    </select>
+                    <button onclick="goBack(0)">Back</button>
+                    <button onclick="showPaymentForm()">Next</button>
+
+                </div>
+
+                <div id="payment-form" class="payment-form">
+                    <h3>Payment Method</h3>
+                    <select>
+                        <option>Credit / Debit Card</option>
+                        <option>e-Wallet</option>
+                        <option>Online Banking</option>
+                    </select>
+                    <select>
+                        <option>Credit / Debit Card</option>
+                        <option>e-Wallet</option>
+                        <option>Online Banking</option>
+                    </select>
+                    <select>
+                        <option>Credit / Debit Card</option>
+                        <option>e-Wallet</option>
+                        <option>Online Banking</option>
+                    </select>
+                    <button onclick="goBack(1)">Back</button>
+                    <button>Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------
+  ---TEXTS----
+  -------------->
+
+    <div class="donate-info-container">
+
+        <div class="donate-info-text">
+            <h1>Why should I donate and where does my donation go?</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="donate-info-text">
+            <h1>How your funds help</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="donate-faq-container">
+
+            <h1>FAQ</h1>
+
+            <div class="donate-faq-text">
+                <h2>1. QUESTION 1</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                </p>
+            </div>
+
+            <div class="donate-faq-text">
+                <h2>2. QUESTION 2</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

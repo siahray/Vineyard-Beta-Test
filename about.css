@@ -1,0 +1,617 @@
+/*/////////////////////
+  ~~~~~~~~General~~~~~~~~
+  ////////////////////*/
+
+  * {
+    font-family: "Inter";
+  }
+  
+  body {
+    position: relative;
+    background-color: whitesmoke;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /*/ ////////////////////
+        ~~~~~~~~Back to top~~~~~~~~
+        ////////////////////*/
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: mediumaquamarine;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  #back-to-top:hover {
+    background-color: darkcyan;
+  }
+  
+
+/*/ ////////////////////
+~~~~~~~~Header~~~~~~~~
+////////////////////*/
+
+.vineyard {
+  font-size: 20px;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.logo img {
+  padding: 10px;
+  height: 40px;
+  width: auto;
+  left: 0;
+}
+
+.vineyard-pc {
+  display: none;
+}
+
+/*/ ////////////////////
+ ~~~~~~~~NAV~~~~~~~~
+ ////////////////////*/
+svg {
+  margin-top: 0;
+  fill: black;
+}
+nav {
+  position: relative;
+  z-index: 1000;
+  margin: 0;
+  background-color: white;
+  width: 100%;
+}
+nav ul {
+  padding-right: 25px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+nav a:hover {
+  color: grey;
+}
+
+/* Dropdown*/
+
+.dropdown {
+  display: none;
+  position: relative;
+}
+.dropdown a {
+  font-size: 10px;
+  margin-top: 10px;
+}
+.dropdown .drop {
+  list-style-type: none;
+  display: none;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  top: 6%;
+  min-width: 200px;
+  z-index: 2000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+.dropdown-pc:hover .drop {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0s;
+}
+
+/*Sidebar*/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 65%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.66);
+  box-shadow: -5px 0 10px black;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+.sidebar svg {
+  margin-top: 20px;
+  margin-left: 25px;
+  width: 30px;
+  fill: black;
+}
+.sidebar a {
+  font-size: 20px;
+  padding: 0 30px;
+  text-decoration: none;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  color: black;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.sidebar a:active {
+  color: mediumaquamarine;
+}
+
+.showOnPc {
+  display: none;
+}
+
+@media screen and (min-width: 706px) {
+  .vineyard {
+    display: none;
+  }
+  .vineyard-pc {
+    font-size: 20px;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+  }
+  .logo-pc img {
+    padding: 10px;
+    height: 70px;
+    width: auto;
+    left: 0;
+  }
+  .header-pc h1 {
+    margin-left: 10px;
+    font-size: clamp(1.75vw, 2vw, 10rem);
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .showOnPc {
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+  nav a {
+    font-size: 25px;
+    padding: 0 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  .dropdown-pc {
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .dropdown-pc a {
+    height: 45px;
+    color: black;
+    padding-top: 20px;
+    text-align: center;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    color: white;
+    background-color: #666;
+  }
+  .dropdown-pc:hover .dropdown-content {
+    display: block;
+  }
+}
+  /*/ ////////////////////
+      ~~~~~~~~Splash~~~~~~~~
+      ////////////////////*/
+  
+  .splash {
+    position: relative;
+    flex: 1;
+    display: flex;
+  }
+  
+  .splash-img {
+    top: 0px;
+    height: auto;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .splash-text {
+    top: 100px;
+    text-align: center;
+    position: absolute;
+    color: white;
+    display: inline-block;
+  }
+  
+  .splash-text h1 {
+    font-size: clamp(5px, 2vw + 5vw, 10rem);
+  }
+  
+  .splash-text p {
+    margin: 20px;
+    font-size: clamp(2px, 4vw, 10rem);
+  }
+  
+  /* Tablet screens */
+  @media (min-width: 720px) {
+    .splash-text {
+      top: 245px;
+    }
+  
+    .splash-text h1 {
+      font-size: clamp(1.5rem, 5vw, 5rem);
+    }
+  
+    .splash-text p {
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+  }
+  
+  /* Desktop screens */
+  @media (min-width: 1024px) {
+    .splash-text {
+      top: 25px;
+    }
+  
+    .splash-text h1 {
+      font-size: clamp(2.5rem, 5vw, 6rem);
+    }
+  
+    .splash-text p {
+      margin-top: 175px;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    }
+  }
+  
+  /*/ ////////////////////
+      ~~~~~~~~MISSION and VISION~~~~~~~~
+      ////////////////////*/
+  
+  .mission-vision {
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    margin: 10px 0, 20px, 20px;
+    z-index: 1;
+    align-items: center;
+  }
+  
+  .mission h1,
+  .vision h1 {
+    color: mediumaquamarine;
+    text-align: center;
+    font-size: clamp(5px, 5vw 10rem);
+  }
+  
+  #mission-text p,
+  #vision-text p {
+    margin: 0 auto;
+    text-align: justify;
+    width: 85%;
+    font-size: clamp(2px, 4vw, 10rem);
+  }
+  
+  #mission-text p::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: mediumaquamarine;
+    margin: 10px auto 0;
+  }
+  
+  @media (min-width: 720px) {
+    .mission h1,
+    .vision h1 {
+      font-size: clamp(1.5rem, 5vw, 5rem);
+    }
+    #mission-text p,
+    #vision-text p {
+      font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+  }
+  
+  /* Desktop screens */
+  @media (min-width: 1024px) {
+    .mission-vision {
+      margin-top: 130px;
+    }
+    .mission h1,
+    .vision h1 {
+      font-size: clamp(2.5rem, 4vw, 6rem);
+    }
+    #mission-text p,
+    #vision-text p {
+      margin: 0 auto;
+      text-align: justify;
+      width: 65%;
+      font-size: clamp(1.5rem, 1.85vw, 2.5rem);
+    }
+    #mission-text p::after {
+      height: 10px;
+    }
+  }
+  
+  /*/ ////////////////////
+      ~~~~~~~~GROWTH~~~~~~~~
+      ////////////////////*/
+  
+  .Growth {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    z-index: 1;
+    align-items: center;
+  }
+  
+  .Area h1 {
+    color: mediumaquamarine;
+    text-align: center;
+    font-size: clamp(5px, 5vw 10rem);
+  }
+  
+  .Area p {
+    margin: 0 auto;
+    text-align: justify;
+    width: 85%;
+    font-size: clamp(2px, 4vw, 10rem);
+  }
+  
+  .map-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map .towervile,
+  .map .balubad,
+  .map .binan,
+  .map .southvile,
+  .map .cariaga {
+    width: 40%;
+    box-sizing: border-box;
+    color: black;
+    padding-left: 5px;
+    font-size: clamp(2px, 3vw, 10rem);
+    margin-left: 20px;
+    z-index: 1;
+  }
+  
+  .towervile {
+    border-left: 3px solid red;
+  }
+  .balubad {
+    border-left: 3px solid blue;
+  }
+  .binan {
+    border-left: 3px solid yellow;
+  }
+  .southvile {
+    border-left: 3px solid yellow;
+  }
+  .cariaga {
+    border-left: 3px solid rebeccapurple;
+  }
+  
+  #growth-map img {
+    height: 350px;
+    width: auto;
+    z-index: -1;
+  }
+  
+  @media (min-width: 720px) {
+    .Area h1 {
+      font-size: clamp(1.5rem, 5vw, 5rem);
+    }
+    .Area p {
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+  }
+  
+  /* Desktop screens */
+  @media (min-width: 1024px) {
+    .Area {
+      margin-top: 150px;
+    }
+    .Area h1 {
+      font-size: clamp(2.5rem, 4vw, 6rem);
+    }
+    .Area p {
+      font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+    }
+    .map .towervile,
+    .map .balubad,
+    .map .binan,
+    .map .southvile,
+    .map .cariaga {
+      width: 100%;
+      padding-left: 25px;
+      font-size: clamp(1.5rem, 1.75vw, 2.5rem);
+      margin-left: 70%;
+    }
+    #growth-map img {
+      margin-left: 100%;
+      height: 100%;
+      width: auto;
+    }
+  }
+  
+  /*/ ////////////////////
+      ~~~~~~~~STORY~~~~~~~~
+      ////////////////////*/
+  
+  .story {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin-top: 30px;
+    padding-top: 20px;
+    z-index: 1;
+    align-items: center;
+    background-color: rgb(50, 157, 132);
+    color: aliceblue;
+  }
+  
+  .story-title {
+    text-align: center;
+  }
+  
+  .story-title h1 {
+    padding: 0;
+    font-size: clamp(5px, 2vw + 5vw, 10rem);
+  }
+  
+  .story-title h2 {
+    margin-top: 0;
+    padding: 0;
+    font-size: clamp(5px, 1vw 10rem);
+  }
+  
+  .story-title h3 {
+    margin-top: 0;
+    padding: 0;
+    font-size: clamp(5px, 1vw 10rem);
+  }
+  
+  .story-img img {
+    height: 250px;
+    width: auto;
+    content: "";
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 30px;
+    border: solid rgb(24, 48, 40) 5px;
+    box-shadow: #464c55 1px;
+  }
+  
+  .story-text {
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  @media (min-width: 720px) {
+    /* Desktop screens */
+    @media (min-width: 1024px) {
+      .story-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .story-img img {
+        height: 450px;
+        margin-top: 6%;
+        margin-left: 25%;
+      }
+      .story-title h1 {
+        font-size: clamp(2.5rem, 3.5vw, 6rem);
+      }
+      .story-title h3 {
+        font-size: clamp(1.5rem, 2.75vw, 5rem);
+      }
+      .story-text p {
+        margin-left: 20%;
+        width: 70%;
+        font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+      }
+    }
+  }
+  
+  /*/////////////////////
+  ~~~~~~~~Footer~~~~~~~~~
+  ////////////////////*/
+  .footer {
+    background-color: #246a54;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+    flex: 1;
+  }
+  
+  .footer p {
+    text-decoration: none;
+    margin: 15px 10px;
+    font-size: clamp(10px, 0.5vw + 0.5vw, 5rem);
+  }
+  
+  .footer a,
+  .footer button {
+    color: #49c19b;
+    text-decoration: none;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    cursor: pointer;
+  }
+  
+  .footer a:hover,
+  .footer button:hover {
+    color: #a8f5d0;
+  }
+  
+  .footer a i,
+  .footer button i {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    color: inherit;
+  }
+  
+  /* Tablet screens */
+  @media (min-width: 720px) {
+    .footer {
+      margin-top: 30px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer a i,
+    .footer button i {
+      font-weight: bold;
+      font-size: clamp(1.5rem, 2vw, 2.5rem);
+    }
+  }

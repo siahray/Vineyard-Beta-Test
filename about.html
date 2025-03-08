@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>About Us</title>
+</head>
+
+<body>
+
+    <button onclick="scrollToTop()" id="back-to-top" title="Back to Top">↑</button>
+
+    <nav>
+
+        <ul class="sidebar">
+
+            
+            <li onclick=hideSidebar()><svg id="burg" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></a></li>
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="#" onclick="toggleDropdown(event)">About Us⠀<i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown">
+                <a href="about.html">About</a>
+                <a href="team.html">Teams</a>
+                <a href="awards.html">Awards</a>
+            </div>
+            <a href="donate.html">Donate</a>
+        </ul>
+        
+        <ul>
+
+            <div class="vineyard">
+                <div class="logo">
+                    <img src="Resources/logo.jpg" alt="logo">
+                </div>
+            </div>
+            
+            <div class="vineyard-pc">
+                <div class="logo-pc">
+                    <img src="Resources/logo.jpg" alt="logo">
+                </div>
+                <div class="header-pc">
+                    <h1>VINEYARD</h1>
+                </div>
+            </div>
+
+            <div class="showOnPc">
+                <a href="index.html">Home</a>
+                <a href="programs.html">Programs</a>
+                <div class="dropdown-pc">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="team.html">Teams</a>
+                        <a href="awards.html">Awards</a>
+                    </div>
+                </div>
+                <a href="donate.html">Donate</a>
+            </div>
+            <li class="burger" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+
+    </nav>
+    <!------------
+  ----SPLASH----
+  -------------->
+
+    <div class="splash">
+
+        <picture class="splash-img">
+            <source media="(min-width: 40em)" srcset="Resources/abts.png" width="1920" height="1262">
+
+            <img src="Resources/abtscp.png" alt="splashpic" width="1200" height="815">
+        </picture>
+
+        <div class="splash-text">
+            <h1>THIS IS VINEYARD</h1>
+
+            <P><b>Vineyard is a Non- profit Christian organization registered with the Securities and Exchange
+                    Commission under
+                    Registration # CN201103608, dated March 3, 2011. It came into existence through the prayer of six
+                    people who
+                    earnestly sought to fulfill God’s word in the communities, as seen in the Book of Isaiah 58:6–14.
+                    These brethren
+                    have previous work experience in a faith-based organization.</b></P>
+        </div>
+    </div>
+
+    <!------------
+  ----MISSION AND VISION----
+  -------------->
+
+    <div class="mission-vision">
+
+        <div class="mission">
+            <h1>MISSION</h1>
+            <div id="mission-text">
+                <p>To empower underprivileged families and groups to manage their development through living and sharing
+                    the gospel, community organizing, skills training, networking, and partnering that promotes the care
+                    and development of children.</p>
+            </div>
+
+        </div>
+
+        <div class="vision">
+            <h1>VISION</h1>
+            <div id="vision-text">
+                <p>A community of people restored to God, working together to achieve quality of life for
+                    underprivileged children, their families, and communities.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Growth">
+
+        <div class="Area">
+
+            <h1>Growth Areas</h1>
+
+            <p>This refers to target areas where growth is determined based on the criteria used. Please see Appendix 3
+                (Growth Selection Criteria and Results) for the details. The “G” areas are best suited to Vineyard’s
+                strategic
+                priorities. Vineyard will therefore seek to expand its work in collaboration with existing and potential
+                partners. There are 4 regions, which include 5 communities that have 9 barangays with 340 linked
+                children in
+                Balubad, Leyte, Towerville, Biñan, and Sta. Rosa.
+                The growth areas will utilize the new program approach with community groups and local partners.
+            </p>
+
+            <p><br>The growth areas will utilize the new program approach with community groups and local partners. </p>
+
+
+            <div class="map-container">
+
+                <div class="map">
+
+                    <div class="towervile">
+                        <h3>
+                            <label>Towerville,
+                                <br>Bulacan</label>
+                        </h3>
+                    </div>
+
+                    <div class="balubad">
+                        <h3>
+                            <label>Balubad Nangka,
+                                <br>Marikina</label>
+                        </h3>
+                    </div>
+
+                    <div class="binan">
+                        <h3>
+                            <label>Southvile 5a Biñan,
+                                <br>Laguna</label>
+                        </h3>
+                    </div>
+
+                    <div class="southvile">
+                        <h3>
+                            <label>Southvile 4 Sta. Rosa,
+                                <br>Laguna</label>
+                        </h3>
+                    </div>
+
+                    <div class="cariaga">
+                        <h3>
+                            <label>Cariaga,
+                                <br>Leyte</label>
+                        </h3>
+                    </div>
+                </div>
+
+                <div id="growth-map">
+                    <img src="Resources/Growthmap.png" alt="Growth">
+                </div>
+            </div>
+
+            <p>The map above shows where these areas are located.</p>
+        </div>
+    </div>
+    <!------------
+  ----STORY----
+  -------------->
+
+    <div class="story">
+
+        <div class="story-title">
+            <h1>Kirk Sherwin Mariano</h1>
+
+            <h3>Sherwin's Story</h3>
+        </div>
+
+        <div class="story-container">
+
+            <div class="story-img">
+                <img src="/Resources/Kirk Sherwin Mariano 1.jpg" alt="">
+            </div>
+
+
+            <div class="story-text">
+                <p>“At the age of nineteen, my parents abandoned me. I became an immediate guardian to eight siblings
+                    and
+                    shouldered the entire responsibility of raising a family alone. Living in a one-room shanty and
+                    sleeping
+                    on a concrete floor with seven siblings was the norm for my family. <br><br>The cramped space and
+                    poor
+                    sanitation meant we’d spend our time outside or at school to avoid our dwelling. The hardest part
+                    for me
+                    and my siblings was the rejection we felt from our parents and people in our community. <br><br>I
+                    used
+                    to be embarrassed to share my story, now I’m excited. I believe my experience is not just about me.
+                    Through telling my story, people can see that I’m just one person, and there’s so many others who
+                    need
+                    help like I did. I am just one story.”</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Vineyard Philippines. All rights reserved.</p>
+        <p>
+            <a href="https://www.example.com/privacy-policy" target="_blank">Privacy Policy</a> |
+            <a href="https://www.example.com/terms" target="_blank">Terms of Service</a>
+        </p>
+        <p class="media-container">Follow us on:
+            <a href="https://www.facebook.com/vineyardphilippines" target="_blank">
+                <i class="fab fa-facebook"></i></a>
+            <span class="facebook-tooltip"></span>
+            <button id="email-copy" class="icon-button">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+            <span id="email-popup" class="email-tooltip"></span>
+            <button id="phone-vcopy" class="icon-button">
+                <i class="fa-solid fa-phone"></i>
+            </button>
+            <span id="phone-popup" class="phone-tooltip"></span>
+            <a href="https://www.google.com/maps/place/101+Ortega+St" target="_blank">
+                <i class="fa-solid fa-location-dot"></i></a>
+            <span class="location-tooltip"></span>
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
